@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chemistry Class 10 – Chapter 14 Quiz</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f7fb;--card:#fff;--tx:#14213d;--mu:#5b6783;--bd:#d5dcea;--ac:#1d4ed8;--sel:#e3ecff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1624;--card:#18223a;--tx:#e8edf8;--mu:#9aa7c4;--bd:#2b3a5c;--ac:#6b9bff;--sel:#223468}}
+:root[data-theme="dark"]{--bg:#0f1624;--card:#18223a;--tx:#e8edf8;--mu:#9aa7c4;--bd:#2b3a5c;--ac:#6b9bff;--sel:#223468}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+.w{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:1.35rem;margin:8px 0 2px}.s{color:var(--mu);margin:0 0 16px;font-size:.92rem}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:14px}
+.q p{margin:0 0 10px;font-weight:600}
+label{display:block;border:1px solid var(--bd);border-radius:8px;padding:10px 12px;margin:6px 0;cursor:pointer}
+label:has(input:checked){background:var(--sel);border-color:var(--ac)}
+input{margin-right:8px}
+button{width:100%;padding:14px;font-size:1rem;font-weight:700;border:0;border-radius:10px;background:var(--ac);color:#fff;cursor:pointer}
+#r{display:none;text-align:center;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:28px 16px}
+#r .n{font-size:2.6rem;font-weight:800;color:var(--ac)}
+#m{color:#c0392b;text-align:center;min-height:1.2em;margin:8px 0}
+</style></head><body><div class="w">
+<h1>Chemistry – Class 10</h1>
+<p class="s">Chapter 14: States of Matter and Phase Changes · 20 MCQs · Select one correct option for each question.</p>
+<div id="quiz"></div><div id="m"></div>
+<button id="sb">Submit</button>
+<div id="r"><div>Your Result</div><div class="n" id="sc"></div><div id="pc"></div><p id="fb"></p></div>
+</div>
+<script>
+var Q=[
+["According to kinetic particle theory, particles in a solid possess which type of motion only?",["Translational motion","Vibrational motion","Rotational motion","All three types of motion"],1],
+["The pressure exerted by a gas is due to:",["Attractive forces between its particles","The weight of its particles","Collisions of its particles with the walls of the container","Friction between its particles"],2],
+["The average kinetic energy of gas particles is directly proportional to:",["Temperature on the Celsius scale","Temperature on the Kelvin scale","Volume of the container","Mass of the gas"],1],
+["The internal energy of a substance is the total of:",["Kinetic energy of its particles only","Potential energy of its particles only","Kinetic energy of its particles and potential energy due to bonding between them","Heat energy supplied by the surroundings only"],2],
+["Why does the temperature remain constant while a solid is melting?",["Particles stop moving","Heat energy is used to overcome the cohesive forces between particles","Heat is lost to the surroundings","The kinetic energy of particles decreases"],1],
+["The boiling point of a liquid is the temperature at which its vapour pressure becomes equal to:",["Its melting point","The internal pressure of the solid","The external (atmospheric) pressure","Zero"],2],
+["Which statement correctly describes evaporation?",["It occurs only at the boiling point","It is a surface phenomenon occurring at all temperatures below the boiling point","It forms bubbles throughout the liquid","It requires an external energy source"],1],
+["Which of the following processes produces cooling?",["Boiling","Condensation","Evaporation","Melting"],2],
+["How does an increase in external pressure affect the boiling point of a liquid?",["It decreases","It increases","It remains unchanged","It becomes zero"],1],
+["The direct conversion of a solid into vapour without passing through the liquid state is called:",["Evaporation","Sublimation","Deposition","Condensation"],1],
+["Which of the following is an example of sublimation?",["Formation of frost","Melting of ice","Dry ice changing to carbon dioxide gas","Formation of dew"],2],
+["The formation of frost in winter is an example of:",["Deposition","Sublimation","Condensation","Evaporation"],0],
+["Solid air fresheners release fragrance mainly through the process of:",["Boiling","Melting","Sublimation","Condensation"],2],
+["In sublimation printing, the ink becomes permanent on the fabric because:",["It remains only on the surface","The vaporised ink enters the pores of the fabric and returns to solid form","It reacts chemically with the dye in the fabric","It is dissolved in water"],1],
+["According to Boyle's law, at constant temperature the volume of a given mass of gas is:",["Directly proportional to its pressure","Inversely proportional to its pressure","Directly proportional to its temperature","Independent of its pressure"],1],
+["If the volume of a given mass of gas is reduced to half at constant temperature, its pressure will:",["Become half","Remain the same","Double","Become four times"],2],
+["Charles' law states that the volume of a given mass of gas is directly proportional to its:",["Pressure at constant temperature","Absolute temperature at constant pressure","Number of moles at constant pressure","Density at constant temperature"],1],
+["According to Avogadro's law, equal volumes of different gases at the same temperature and pressure contain:",["Equal masses","Equal densities","An equal number of molecules","Equal kinetic energies of each molecule only"],2],
+["Diffusion is the spontaneous movement of gas particles from a region of:",["Low concentration to high concentration","High concentration to low concentration","Low temperature to high temperature","High pressure to low temperature"],1],
+["Under similar conditions of temperature and pressure, which gas diffuses at the fastest rate?",["NO\u2082","SO\u2082","H\u2082S","All diffuse at the same rate"],2]
+];
+var L=["A","B","C","D"],h="";
+Q.forEach(function(q,i){h+='<div class="q"><p>'+(i+1)+'. '+q[0]+'</p>';
+q[1].forEach(function(o,j){h+='<label><input type="radio" name="q'+i+'" value="'+j+'">'+L[j]+'. '+o+'</label>'});h+='</div>'});
+document.getElementById("quiz").innerHTML=h;
+document.getElementById("sb").onclick=function(){
+var s=0,u=[];Q.forEach(function(q,i){var c=document.querySelector('input[name="q'+i+'"]:checked');if(!c)u.push(i+1);else if(+c.value===q[2])s++});
+if(u.length){document.getElementById("m").textContent="Please answer all questions. Unanswered: "+u.join(", ");return}
+document.getElementById("m").textContent="";
+document.getElementById("quiz").style.display="none";this.style.display="none";
+var p=Math.round(s/Q.length*100);
+document.getElementById("sc").textContent=s+" / "+Q.length;
+document.getElementById("pc").textContent="Percentage: "+p+"%";
+document.getElementById("fb").textContent="You scored "+s+" out of "+Q.length+" marks in this quiz.";
+document.getElementById("r").style.display="block";window.scrollTo(0,0)};
+</script></body></html>
